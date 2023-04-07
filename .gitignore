@@ -1,3 +1,6 @@
 /target
 /config.ron
 /.idea
+/build.log
+/dist/
+/dist_compressed/
