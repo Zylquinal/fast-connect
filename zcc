@@ -1,0 +1,9 @@
+#!/bin/bash
+
+str="'$*'"
+if [[ $str == *"aarch64-apple-darwin"* ]]; then
+  exec "$ZIG_HOME"/zig cc -target "aarch64-macos" --sysroot="$MACOS_SDK" -I/usr/include -L/usr/lib -F/System/Library/Frameworks "$@"
+elif [[ $str == *"x86_64-apple-darwin"* ]]; then
+  exec "$ZIG_HOME"/zig cc -target "x86_64-macos" --sysroot="$MACOS_SDK" -I/usr/include -L/usr/lib -F/System/Library/Frameworks "$@"
+fi
+

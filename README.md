@@ -2,6 +2,48 @@
 
 FastConnect is a cross-platform CLI based tool to connect to Binus-Access, that is written in Rust.
 
+## How to build
+
+### Cargo
+
+```bash
+cargo build --release
+```
+
+### build.sh
+
+#### Cross compile
+
+- x86_64-unknown-linux-gnu
+- x86_64-unknown-linux-gnux32
+- x86_64-unknown-linux-musl
+- i686-unknown-linux-gnu
+- i686-unknown-linux-musl
+- i586-unknown-linux-gnu
+- i586-unknown-linux-musl
+- aarch64-unknown-linux-gnu
+- aarch64-unknown-linux-musl
+- x86_64-pc-windows-gnu
+- i686-pc-windows-gnu
+- x86_64-apple-darwin
+- aarch64-apple-darwin
+
+#### Dependencies
+
+- [rustup](https://rustup.rs/)
+- [zig](https://ziglang.org/)
+- [zigbuild](https://github.com/rust-cross/cargo-zigbuild)
+- [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
+- [MacOS SDK](https://developer.apple.com/macos/)
+
+#### Running the script
+
+```bash
+export ZIG_HOME=/path/to/zig
+export MACOS_SDK=/path/to/MACOS11_3_SDK # I can't include the SDK in the repo due to the licensing
+bash build.sh
+```
+
 ## Logic
 
 ### Backaccess

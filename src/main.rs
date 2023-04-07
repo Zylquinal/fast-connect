@@ -79,7 +79,7 @@ fn main() {
     } else {
         println!("Login Failed!");
     }
-    println!("Time elapsed: {:?} ms", start.elapsed());
+    println!("Time elapsed: {:?} ms", start.elapsed().as_millis());
 }
 
 fn load_config() -> Config {
