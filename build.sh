@@ -80,11 +80,6 @@ check_dependencies() {
     echo "cargo zigbuild could not be found"
     exit
   fi
-  if ! command -v docker &> /dev/null
-  then
-    echo "docker could not be found... skipping x86_64-apple-darwin..."
-    sleep 1
-  fi
 
   for os in "${OSes[@]}"
   do
